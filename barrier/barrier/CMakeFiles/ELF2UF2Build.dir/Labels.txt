@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/CMakeFiles/ELF2UF2Build
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/CMakeFiles/ELF2UF2Build.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/CMakeFiles/ELF2UF2Build-complete.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
