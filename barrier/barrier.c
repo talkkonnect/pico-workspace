@@ -1,56 +1,65 @@
 /**
  * Copyright (c) 2022 Dynamic IT Solutions CO., LTD
+ * Serial Traffic Barrier and Traffic Light Controller
  * Suvir Kumar <suvir@dits.co.th>
  * version 0.1 updates 10/11/2022 at 12:57
  */
 
 #include "pico/stdlib.h"
 
-int main() {
-   // Barrier Controller Interface
-   //up   (Output)
-   //down (Output)
-   //push (Output)
-   //red  (Input)
-   //green (Input)
 
-    //define board pins
-    const uint LED_PIN = 25;
-    const uint ETT_PORT_0 = 16;
-    const uint ETT_PORT_1 = 17;
-    const uint ETT_PORT_2 = 18;
-    const uint ETT_PORT_3 = 19;
-    const uint ETT_PORT_4 = 20;
-    const uint ETT_PORT_5 = 21;
-    const uint ETT_PORT_6 = 22;
-    const uint ETT_PORT_7 = 28;
+    const uint LED_PIN    = 25; //On Board LED (Output)
+    const uint ETT_PORT_0 = 16; //Barrier Up (Output Relay)
+    const uint ETT_PORT_1 = 17; //Barrier Down (Output Relay)
+    const uint ETT_PORT_2 = 18; //Push up, Push Down (Output Relay)
+    const uint ETT_PORT_3 = 19; //Barrier Position UP (Input Opto)
+    const uint ETT_PORT_4 = 20; //Barrier Position Down (Input Opto)
+    const uint ETT_PORT_5 = 21; //Relay Red Light 220V (Output)
+    const uint ETT_PORT_6 = 22; //Relay Green Light 220V (Output)
+    const uint ETT_PORT_7 = 28; //Beeper
+
+    const uint BarrierUpCmd      = ETT_PORT_0;
+    const uint BarrierDownCmd    = ETT_PORT_1;
+    const uint BarrierPushBtnCmd = ETT_PORT_2;
+    const uint BarrierUpStatus   = ETT_PORT_3;
+    const uint BarrierDownStatus = ETT_PORT_4;
+    const uint TrafficLightRed   = ETT_PORT_5;
+    const uint TrafficLightGreen = ETT_PORT_6;
+    const uint Beeper            = ETT_PORT_7;
+
+int main() {
+    // Define Board Parameters
 
     //initalize board pins
     gpio_init(LED_PIN);
-    gpio_init(ETT_PORT_0);
-    gpio_init(ETT_PORT_1);
-    gpio_init(ETT_PORT_2);
-    gpio_init(ETT_PORT_3);
-    gpio_init(ETT_PORT_4);
-    gpio_init(ETT_PORT_5);
-    gpio_init(ETT_PORT_6);
-    gpio_init(ETT_PORT_7);
+    gpio_init(BarrierUpCmd);
+    gpio_init(BarrierDownCmd);
+    gpio_init(BarrierPushBtnCmd);
+    gpio_init(BarrierUpStatus);
+    gpio_init(BarrierDownStatus);
+    gpio_init(TrafficLightRed);
+    gpio_init(TrafficLightGreen);
+    gpio_init(Beeper);
 
     gpio_set_dir(LED_PIN, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_0, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_1, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_2, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_3, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_4, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_5, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_6, GPIO_OUT);
-    gpio_set_dir(ETT_PORT_7, GPIO_OUT);
+    gpio_set_dir(BarrierUpCmd, GPIO_OUT);
+    gpio_set_dir(BarrierDownCmd, GPIO_OUT);
+    gpio_set_dir(BarrierPushBtnCmd, GPIO_OUT);
+    gpio_set_dir(BarrierUpStatus, GPIO_IN);
+    gpio_set_dir(BarrierDownStatus, GPIO_IN);
+    gpio_set_dir(TrafficLightRed, GPIO_OUT);
+    gpio_set_dir(TrafficLightGreen, GPIO_OUT);
+    gpio_set_dir(Beeper, GPIO_OUT);
+
     while (true) {
-        gpio_put(LED_PIN, 1);
-        gpio_put(ETT_PORT_0, 1);
-        sleep_ms(2000);
-        gpio_put(LED_PIN, 0);
-        gpio_put(ETT_PORT_0, 0);
-        sleep_ms(1000);
+	SendBarrierUpCommand();
     }
+}
+
+void SendBarrierUpCommand(void){
+        gpio_put(BarrierUpCmd, 1);
+        sleep_ms(2000);
+        gpio_put(BarrierUpCmd, 0);
+        sleep_ms(1000);
+	return;
 }
