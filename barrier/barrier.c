@@ -27,9 +27,26 @@
     const uint TrafficLightGreen = ETT_PORT_6;
     const uint Beeper            = ETT_PORT_7;
 
+void sendBarrierPulse(uint BarrierCmd, int delayBefore, int delayAfter){
+        gpio_put(BarrierCmd, 1);
+        sleep_ms(delayBefore);
+        gpio_put(BarrierCmd, 0);
+        sleep_ms(delayAfter);
+	return;
+}
+
+void sendTrafficSignalOn(uint TrafficCmd){
+        gpio_put(TrafficCmd, 1);
+	return;
+}
+
+void sendTrafficSignalOff(uint TrafficCmd){
+        gpio_put(TrafficCmd, 0);
+	return;
+}
+
 int main() {
     // Define Board Parameters
-
     //initalize board pins
     gpio_init(LED_PIN);
     gpio_init(BarrierUpCmd);
@@ -52,14 +69,13 @@ int main() {
     gpio_set_dir(Beeper, GPIO_OUT);
 
     while (true) {
-	SendBarrierUpCommand();
+	//sendBarrierPulse(BarrierUpCmd, 1000,2000);
+	//sendBarrierPulse(BarrierDownCmd, 1000,2000);
+	//sendBarrierPulse(BarrierPushBtnCmd, 1000,2000);
+	sendTrafficSignalOn(TrafficLightRed);
+	sendTrafficSignalOff(TrafficLightRed);
+	sendTrafficSignalOn(TrafficLightGreen);
+	sendTrafficSignalOff(TrafficLightGreen);
     }
 }
 
-void SendBarrierUpCommand(void){
-        gpio_put(BarrierUpCmd, 1);
-        sleep_ms(2000);
-        gpio_put(BarrierUpCmd, 0);
-        sleep_ms(1000);
-	return;
-}
