@@ -197,6 +197,12 @@ hardware/uart.h
 /root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier.c
 pico/stdlib.h
 /root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/stdlib.h
+stdio.h
+-
+pico/stdlib.h
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/stdlib.h
+hardware/uart.h
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/hardware/uart.h
 
 generated/pico_base/pico/config_autogen.h
 /root/raspberry-pi-pico/pico/pico-sdk/src/boards/include/boards/pico.h
