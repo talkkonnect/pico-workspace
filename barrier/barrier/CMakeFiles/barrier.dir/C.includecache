@@ -172,6 +172,10 @@ hardware/structs/uart.h
 hardware/regs/dreq.h
 /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/hardware/regs/dreq.h
 
+/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h
+pico.h
+/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/pico.h
+
 /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
 hardware/platform_defs.h
 /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/hardware/platform_defs.h
@@ -195,14 +199,16 @@ hardware/uart.h
 /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/hardware/uart.h
 
 /root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier.c
+hardware/uart.h
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/hardware/uart.h
+pico/bootrom.h
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/bootrom.h
 pico/stdlib.h
 /root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/stdlib.h
 stdio.h
 -
-pico/stdlib.h
-/root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/stdlib.h
-hardware/uart.h
-/root/raspberry-pi-pico/pico/pico-workspace/barrier/hardware/uart.h
+string.h
+-
 
 generated/pico_base/pico/config_autogen.h
 /root/raspberry-pi-pico/pico/pico-sdk/src/boards/include/boards/pico.h

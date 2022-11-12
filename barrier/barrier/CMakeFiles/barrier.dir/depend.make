@@ -218,6 +218,7 @@ barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-
 barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
 barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
 barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
+barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h
 barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
 barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
 barrier/CMakeFiles/barrier.dir/barrier.c.obj: /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
