@@ -68,8 +68,8 @@ void showMenu(void) {
 int main() {
   int onboard_led = 0;
   int beeper_state = 0;
-  int current_barrier_state = 2;
-  int previous_barrier_state = 2;
+  int barrierdownsignal = 0;
+  int barrierupsignal = 0;
 
   gpio_init(LED_PIN);
   gpio_init(BARRIER_UP_CMD);
@@ -109,41 +109,11 @@ int main() {
 
   while (true) {
 
-    if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
-        gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
-      	current_barrier_state = 2;
-    }
-    if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
-        gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
-      	current_barrier_state = 0;
-    }
-    if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
-        gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
-      	current_barrier_state = 1;
-    }
-    if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
-        gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
-      	current_barrier_state = 2;
-    }
-
-    if (current_barrier_state != previous_barrier_state) {
-      if (current_barrier_state == 0) {
-        printf("{BRPOS DOWN}\n");
-      }
-      if (current_barrier_state == 1) {
-        printf("{BRPOS UP}\n");
-      }
-      if (current_barrier_state == 2) {
-        printf("{BRPOS UNDEF}\n");
-      }
-      previous_barrier_state = current_barrier_state;
-    }
-
     while (uart_is_readable(uart0)) {
       buffer = getchar();
 
       if (buffer == 'c') {
-        printf("{COMM}\n");
+        printf(":COMM$\n");
       }
       if (buffer == '?') {
         printf("%c%c%c%c", 0x1B, 0x5B, 0x32, 0x4A);
@@ -153,74 +123,77 @@ int main() {
         if (onboard_led == 0) {
           gpio_put(LED_PIN, HIGH);
           onboard_led = 1;
-          printf("{OB LED ON}\n");
+          printf(":OB LED ON$\n");
         } else if (onboard_led == 1) {
           gpio_put(LED_PIN, LOW);
           onboard_led = 0;
-          printf("{OB LED OFF}\n");
+          printf(":OB LED OFF$\n");
         }
       }
       if (buffer == '2') {
         sendBarrierPulse(BARRIER_UP_CMD, 1000);
-        printf("{BR UP}\n");
+        printf(":BR UP$\n");
       }
       if (buffer == '3') {
         sendBarrierPulse(BARRIER_DOWN_CMD, 1000);
-        printf("{BR DOWN}\n");
+        printf(":BR DOWN$\n");
       }
       if (buffer == '4') {
         sendBarrierPulse(BARRIER_PUSH_BTN_CMD, 1000);
-        printf("{BR PUSHBUTTON}\n");
+        printf(":BR PUSHBUTTON$\n");
       }
       if (buffer == '5') {
         if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
-          printf("{BRPOS UNDEF}\n");
+          printf(":BRPOS UNDERTERMINED\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
-          printf("{BRPOS DOWN}\n");
+          printf(":BRPOS DOWN$\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
-          printf("{BRPOS UP}\n");
+          printf(":BRPOS UP$\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
-          printf("{BRPOS UNDEF}\n");
+          printf(":BRPOS UNDERTERMINED$\n");
         }
       }
       if (buffer == '6') {
         sendTrafficSignalOn(TRAFFIC_LIGHT_RED);
-        printf("{TLRED ON}\n");
+        printf(":TLRED ON$\n");
       }
       if (buffer == '7') {
         sendTrafficSignalOff(TRAFFIC_LIGHT_RED);
-        printf("{TLRED OFF}\n");
+        printf(":TLRED OFF$\n");
       }
       if (buffer == '8') {
         sendTrafficSignalOn(TRAFFIC_LIGHT_GREEN);
-        printf("{TLGRN ON}\n");
+        printf(":TLGRN ON$\n");
       }
       if (buffer == '9') {
         sendTrafficSignalOff(TRAFFIC_LIGHT_GREEN);
-        printf("{TLGRN OFF}\n");
+        printf(":TLGRN OFF$\n");
       }
       if (buffer == '0') {
         if (beeper_state == 0) {
           gpio_put(BEEPER, HIGH);
           beeper_state = 1;
-          printf("{BP ON}\n");
+          printf(":BP ON$\n");
         } else if (beeper_state == 1) {
           gpio_put(BEEPER, LOW);
           beeper_state = 0;
-          printf("{BP OFF}\n");
+          printf(":BP OFF$\n");
         }
       }
+
       if (buffer == 'P') {
-        printf("{UPLOAD FIRMWARE MODE}\n");
+        printf(":UPLOAD FIRMWARE MODE$\n");
         reset_usb_boot(0, 0);
       }
     }
+  printf("lala\n");
+
   }
 }
