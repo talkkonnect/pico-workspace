@@ -199,12 +199,12 @@ hardware/uart.h
 /root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/hardware/uart.h
 
 /root/raspberry-pi-pico/pico/pico-workspace/barrier/barrier.c
-hardware/uart.h
-/root/raspberry-pi-pico/pico/pico-workspace/barrier/hardware/uart.h
-pico/bootrom.h
-/root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/bootrom.h
 pico/stdlib.h
 /root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/stdlib.h
+pico/bootrom.h
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/pico/bootrom.h
+hardware/uart.h
+/root/raspberry-pi-pico/pico/pico-workspace/barrier/hardware/uart.h
 stdio.h
 -
 string.h

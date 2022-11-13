@@ -6,16 +6,20 @@
  * Raspbery Pi Pico with ETT GOIO Board
  */
 
-#include "hardware/uart.h"
-#include "pico/bootrom.h"
 #include "pico/stdlib.h"
+#include "pico/bootrom.h"
+#include "hardware/uart.h"
 #include <stdio.h>
 #include <string.h>
 
 #define LOW 0
 #define HIGH 1
 
-const char VERSION[] = "Version 0.3 Released 12/11/2022";
+#define UART0_TX_PIN 0
+#define UART0_RX_PIN 1
+
+
+const char VERSION[] = "Version 0.4 Released 13/11/2022";
 
 const uint LED_PIN = 25;    // Pico On Board LED (Output LED)
 const uint ETT_PORT_0 = 16; // Barrier Up (Output Relay)
@@ -128,13 +132,13 @@ int main() {
 
     if (current_barrier_state != previous_barrier_state) {
       if (current_barrier_state == 0) {
-        printf("{BRPOS DOWN}\n");
+        printf("'{\"state\":\"BR DWN\"}'\n");
       }
       if (current_barrier_state == 1) {
-        printf("{BRPOS UP}\n");
+        printf("'{\"state\":\"BR UP\"}'\n");
       }
       if (current_barrier_state == 2) {
-        printf("{BRPOS UNDEF}\n");
+        printf("'{\"state\":\"BR UNDEF\"}'\n");
       }
       previous_barrier_state = current_barrier_state;
     }
@@ -143,7 +147,7 @@ int main() {
       buffer = getchar();
 
       if (buffer == 'c') {
-        printf("{COMM}\n");
+        printf("'{\"ack\":\"COM\"}'\n");
       }
       if (buffer == '?') {
         printf("%c%c%c%c", 0x1B, 0x5B, 0x32, 0x4A);
@@ -153,72 +157,76 @@ int main() {
         if (onboard_led == 0) {
           gpio_put(LED_PIN, HIGH);
           onboard_led = 1;
-          printf("{OB LED ON}\n");
+          printf("'{\"ack\":\"OB LED ON\"}'\n");
         } else if (onboard_led == 1) {
           gpio_put(LED_PIN, LOW);
           onboard_led = 0;
-          printf("{OB LED OFF}\n");
+          printf("'{\"ack\":\"OB LED OFF\"}'\n");
         }
       }
       if (buffer == '2') {
         sendBarrierPulse(BARRIER_UP_CMD, 1000);
-        printf("{BR UP}\n");
+        printf("'{\"ack\":\"BR UP\"}'\n");
       }
       if (buffer == '3') {
         sendBarrierPulse(BARRIER_DOWN_CMD, 1000);
-        printf("{BR DOWN}\n");
+        printf("'{\"ack\":\"BR DWN\"}'\n");
       }
       if (buffer == '4') {
         sendBarrierPulse(BARRIER_PUSH_BTN_CMD, 1000);
-        printf("{BR PUSHBUTTON}\n");
+        printf("'{\"ack\":\"BR PB\"}'\n");
       }
       if (buffer == '5') {
         if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
-          printf("{BRPOS UNDEF}\n");
+            printf("'{\"ack\":\"BR POS\"}'\n");
+            printf("'{\"state\":\"BR UNDEF\"}'\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
-          printf("{BRPOS DOWN}\n");
+            printf("'{\"ack\":\"BR POS\"}'\n");
+            printf("'{\"state\":\"BR DWN\"}'\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
-          printf("{BRPOS UP}\n");
+            printf("'{\"ack\":\"BR POS\"}'\n");
+            printf("'{\"state\":\"BR UP\"}'\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
-          printf("{BRPOS UNDEF}\n");
+            printf("'{\"ack\":\"BR POS\"}'\n");
+            printf("'{\"state\":\"BR UNDEF\"}'\n");
         }
       }
       if (buffer == '6') {
         sendTrafficSignalOn(TRAFFIC_LIGHT_RED);
-        printf("{TLRED ON}\n");
+        printf("'{\"ack\":\"TL RED ON\"}'\n");
       }
       if (buffer == '7') {
         sendTrafficSignalOff(TRAFFIC_LIGHT_RED);
-        printf("{TLRED OFF}\n");
+        printf("'{\"ack\":\"TL RED OFF\"}'\n");
       }
       if (buffer == '8') {
         sendTrafficSignalOn(TRAFFIC_LIGHT_GREEN);
-        printf("{TLGRN ON}\n");
+        printf("'{\"ack\":\"TL GRN ON\"}'\n");
       }
       if (buffer == '9') {
         sendTrafficSignalOff(TRAFFIC_LIGHT_GREEN);
-        printf("{TLGRN OFF}\n");
+        printf("'{\"ack\":\"TL GRN OFF\"}'\n");
       }
       if (buffer == '0') {
         if (beeper_state == 0) {
           gpio_put(BEEPER, HIGH);
           beeper_state = 1;
-          printf("{BP ON}\n");
+         printf("'{\"ack\":\"BEEP ON\"}'\n");
         } else if (beeper_state == 1) {
           gpio_put(BEEPER, LOW);
           beeper_state = 0;
-          printf("{BP OFF}\n");
+         printf("'{\"ack\":\"BEEP OFF\"}'\n");
         }
       }
-      if (buffer == 'P') {
-        printf("{UPLOAD FIRMWARE MODE}\n");
+      if (buffer == 'U') {
+         printf("'{\"ack\":\"FIRMWARE UPLOAD\"}'\n");
         reset_usb_boot(0, 0);
       }
     }
