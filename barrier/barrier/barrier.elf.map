@@ -1077,9 +1077,9 @@ Discarded input sections
  .comment       0x00000000       0x52 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text          0x00000000        0x0 /tmp/cc8IIXiw.o
- .data          0x00000000        0x0 /tmp/cc8IIXiw.o
- .bss           0x00000000        0x0 /tmp/cc8IIXiw.o
+ .text          0x00000000        0x0 /tmp/ccscO9wt.o
+ .data          0x00000000        0x0 /tmp/ccscO9wt.o
+ .bss           0x00000000        0x0 /tmp/ccscO9wt.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x10 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1343,11 +1343,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/cc8IIXiw.o
+ .boot2         0x10000000      0x100 /tmp/ccscO9wt.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x3bb8
+.text           0x10000100     0x3978
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1412,206 +1412,207 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  .text.showMenu
                 0x1000035c      0x3e0 CMakeFiles/barrier.dir/barrier.c.obj
                 0x1000035c                showMenu
- .text.respond  0x1000073c     0x11c0 CMakeFiles/barrier.dir/barrier.c.obj
+ .text.respond  0x1000073c     0x101c CMakeFiles/barrier.dir/barrier.c.obj
                 0x1000073c                respond
  .text.startup.main
-                0x100018fc      0x42c CMakeFiles/barrier.dir/barrier.c.obj
-                0x100018fc                main
+                0x10001758      0x38c CMakeFiles/barrier.dir/barrier.c.obj
+                0x10001758                main
  .text.gpio_set_function
-                0x10001d28       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001d28                gpio_set_function
+                0x10001ae4       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001ae4                gpio_set_function
  .text.gpio_set_pulls
-                0x10001d58       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001d58                gpio_set_pulls
+                0x10001b14       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001b14                gpio_set_pulls
  .text.gpio_init
-                0x10001d88       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001d88                gpio_init
+                0x10001b44       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001b44                gpio_init
  .text.hw_claim_or_assert
-                0x10001dc4       0x44 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001dc4                hw_claim_or_assert
+                0x10001b80       0x44 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001b80                hw_claim_or_assert
  .text.running_on_fpga
-                0x10001e08       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10001e08                running_on_fpga
+                0x10001bc4       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10001bc4                running_on_fpga
  .text.spin_locks_reset
-                0x10001e18       0x1c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001e18                spin_locks_reset
+                0x10001bd4       0x1c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10001bd4                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10001e34       0x18 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001e34                next_striped_spin_lock_num
+                0x10001bf0       0x18 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10001bf0                next_striped_spin_lock_num
  .text.irq_set_enabled
-                0x10001e4c       0x24 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001e4c                irq_set_enabled
+                0x10001c08       0x24 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c08                irq_set_enabled
  .text.irq_get_vtable_handler
-                0x10001e70       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001e70                irq_get_vtable_handler
+                0x10001c2c       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c2c                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10001e80       0x54 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001e80                irq_set_exclusive_handler
+                0x10001c3c       0x54 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c3c                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x10001ed4      0x1b4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001ed4                irq_remove_handler
+                0x10001c90      0x1b4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c90                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10002088       0xb4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002088                irq_add_tail_to_free_list
+                0x10001e44       0xb4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001e44                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x1000213c       0x24 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000213c                irq_init_priorities
+                0x10001ef8       0x24 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001ef8                irq_init_priorities
  .text.lock_init
-                0x10002160       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10002160                lock_init
+                0x10001f1c       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10001f1c                lock_init
  .text.timer_pool_entry_comparator
-                0x10002170       0x34 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002170                timer_pool_entry_comparator
+                0x10001f2c       0x34 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001f2c                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x100021a4       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001f60       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock
-                0x100021d4      0x114 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001f90      0x114 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x100022e8      0x1d0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100020a4      0x1d0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x100024b8       0x64 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100024b8                alarm_pool_init_default
+                0x10002274       0x64 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002274                alarm_pool_init_default
  .text.alarm_pool_add_alarm_at
-                0x1000251c      0x19c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x1000251c                alarm_pool_add_alarm_at
+                0x100022d8      0x19c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100022d8                alarm_pool_add_alarm_at
  .text.sleep_until
-                0x100026b8       0xc4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100026b8                sleep_until
+                0x10002474       0xc4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002474                sleep_until
  .text.sleep_ms
-                0x1000277c       0x38 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x1000277c                sleep_ms
+                0x10002538       0x38 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002538                sleep_ms
  .text.hardware_alarm_irq_handler
-                0x100027b4       0xb0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002570       0xb0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10002864       0x18 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002864                hardware_alarm_claim
+                0x10002620       0x18 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002620                hardware_alarm_claim
  .text.time_us_64
-                0x1000287c       0x18 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x1000287c                time_us_64
+                0x10002638       0x18 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002638                time_us_64
  .text.busy_wait_until
-                0x10002894       0x20 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002894                busy_wait_until
+                0x10002650       0x20 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002650                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x100028b4       0x8c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x100028b4                hardware_alarm_set_callback
+                0x10002670       0x8c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002670                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10002940       0xe8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002940                hardware_alarm_set_target
+                0x100026fc       0xe8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100026fc                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10002a28       0x40 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002a28                hardware_alarm_cancel
+                0x100027e4       0x40 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100027e4                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x10002a68       0x5c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002824       0x5c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x10002ac4      0x1b8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002ac4                ph_post_alloc_init
+                0x10002880      0x1b8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002880                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x10002c7c       0x4c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002c7c                ph_merge_two_pass
+                0x10002a38       0x4c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002a38                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10002cc8      0x1b8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002a84      0x1b8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x10002e80      0x1bc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002e80                ph_remove_head
+                0x10002c3c      0x1bc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002c3c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x1000303c       0x7c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000303c                ph_remove_and_free_node
+                0x10002df8       0x7c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002df8                ph_remove_and_free_node
  .text.mutex_init
-                0x100030b8       0x1c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x100030b8                mutex_init
+                0x10002e74       0x1c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10002e74                mutex_init
  .text.recursive_mutex_init
-                0x100030d4       0x1c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x100030d4                recursive_mutex_init
+                0x10002e90       0x1c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10002e90                recursive_mutex_init
  .text.uart_init
-                0x100030f0       0xe4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x100030f0                uart_init
+                0x10002eac       0xe4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10002eac                uart_init
  .text.runtime_init
-                0x100031d4       0xf4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100031d4                runtime_init
- .text.exit     0x100032c8        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100032c8                exit
- .text.panic    0x100032cc       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100032cc                panic
+                0x10002f90       0xf4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002f90                runtime_init
+ .text.exit     0x10003084        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003084                exit
+ .text.panic    0x10003088       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003088                panic
  .text.hard_assertion_failure
-                0x100032fc        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100032fc                hard_assertion_failure
+                0x100030b8        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100030b8                hard_assertion_failure
  .text.clocks_init
-                0x10003308      0x2c0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10003308                clocks_init
+                0x100030c4      0x2c0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100030c4                clocks_init
  .text.clock_get_hz
-                0x100035c8        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100035c8                clock_get_hz
+                0x10003384        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10003384                clock_get_hz
  .text.pll_init
-                0x100035d4       0xa8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x100035d4                pll_init
+                0x10003390       0xa8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10003390                pll_init
  .text.watchdog_start_tick
-                0x1000367c       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x1000367c                watchdog_start_tick
+                0x10003438       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10003438                watchdog_start_tick
  .text.xosc_init
-                0x1000368c       0x28 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x1000368c                xosc_init
+                0x10003448       0x28 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10003448                xosc_init
  .text._out_char
-                0x100036b4       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003470       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.weak_raw_vprintf
-                0x100036c4       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x100036c4                weak_raw_vprintf
- .text          0x100036f4       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10003480       0x30 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003480                weak_raw_vprintf
+ .text          0x100034b0       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10003704       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003704                rom_func_lookup
+                0x100034c0       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100034c0                rom_func_lookup
  .text.rom_data_lookup
-                0x10003714       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003714                rom_data_lookup
+                0x100034d0       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100034d0                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10003724       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003724                rom_funcs_lookup
+                0x100034e0       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100034e0                rom_funcs_lookup
  .text.__wrap___aeabi_uidiv
-                0x10003760       0x4c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10003760                __wrap___aeabi_uidiv
-                0x10003760                __wrap___aeabi_uidivmod
-                0x10003760                div_u32u32
-                0x10003760                divmod_u32u32
-                0x10003768                divmod_u32u32_unsafe
-                0x10003790                divmod_u32u32_savestate
+                0x1000351c       0x4c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x1000351c                __wrap___aeabi_uidiv
+                0x1000351c                __wrap___aeabi_uidivmod
+                0x1000351c                div_u32u32
+                0x1000351c                divmod_u32u32
+                0x10003524                divmod_u32u32_unsafe
+                0x1000354c                divmod_u32u32_savestate
  .text.__aeabi_double_init
-                0x100037ac       0xbc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x100037ac                __aeabi_double_init
+                0x10003568       0xbc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10003568                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10003868       0x2c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003868                double_table_shim_on_use_helper
+                0x10003624       0x2c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003624                double_table_shim_on_use_helper
  .text.__aeabi_lmul
-                0x10003894       0x32 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10003894                __wrap___aeabi_lmul
- *fill*         0x100038c6        0x2 
+                0x10003650       0x32 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10003650                __wrap___aeabi_lmul
+ *fill*         0x10003682        0x2 
  .text.__aeabi_float_init
-                0x100038c8       0x68 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x100038c8                __aeabi_float_init
+                0x10003684       0x68 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10003684                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10003930       0x2c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10003930                float_table_shim_on_use_helper
- .text          0x1000395c       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x1000395c                __aeabi_mem_init
- .text.memcpy   0x1000396c        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x1000396c                __wrap___aeabi_memcpy
-                0x1000396c                __wrap_memcpy
+                0x100036ec       0x2c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x100036ec                float_table_shim_on_use_helper
+ .text          0x10003718       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10003718                __aeabi_mem_init
+ .text.memcpy   0x10003728        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10003728                __wrap___aeabi_memcpy
+                0x10003728                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10003978       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003734       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x10003988       0xac CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003744       0xac CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string
-                0x10003a34       0xf8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100037f0       0xf8 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x10003b2c       0xa4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10003b2c                __wrap_putchar
+                0x100038e8       0xa4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100038e8                __wrap_putchar
  .text.__wrap_puts
-                0x10003bd0       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10003bd0                __wrap_puts
- .text          0x10003c0c       0x68 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x10003c0c                strlen
+                0x1000398c       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000398c                __wrap_puts
+ .text          0x100039c8       0x68 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x100039c8                strlen
  *(.fini)
- .fini          0x10003c74        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
-                0x10003c74                _fini
- .fini.__stub   0x10003c78       0x40 linker stubs
+ .fini          0x10003a30        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
+                0x10003a30                _fini
+ *fill*         0x10003a34        0x4 
+ .fini.__stub   0x10003a38       0x40 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1623,92 +1624,92 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10003cb8        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x10003cb8                . = ALIGN (0x4)
+ .eh_frame      0x10003a78        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10003a78                . = ALIGN (0x4)
 
-.glue_7         0x10003cb8        0x0
- .glue_7        0x10003cb8        0x0 linker stubs
+.glue_7         0x10003a78        0x0
+ .glue_7        0x10003a78        0x0 linker stubs
 
-.glue_7t        0x10003cb8        0x0
- .glue_7t       0x10003cb8        0x0 linker stubs
+.glue_7t        0x10003a78        0x0
+ .glue_7t       0x10003a78        0x0 linker stubs
 
-.vfp11_veneer   0x10003cb8        0x0
- .vfp11_veneer  0x10003cb8        0x0 linker stubs
+.vfp11_veneer   0x10003a78        0x0
+ .vfp11_veneer  0x10003a78        0x0 linker stubs
 
-.v4_bx          0x10003cb8        0x0
- .v4_bx         0x10003cb8        0x0 linker stubs
+.v4_bx          0x10003a78        0x0
+ .v4_bx         0x10003a78        0x0 linker stubs
 
-.iplt           0x10003cb8        0x0
- .iplt          0x10003cb8        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10003a78        0x0
+ .iplt          0x10003a78        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10003cb8      0x3b8
+.rodata         0x10003a78      0x39c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.VERSION
-                0x10003cb8       0x31 CMakeFiles/barrier.dir/barrier.c.obj
-                0x10003cb8                VERSION
- *fill*         0x10003ce9        0x3 
+                0x10003a78       0x31 CMakeFiles/barrier.dir/barrier.c.obj
+                0x10003a78                VERSION
+ *fill*         0x10003aa9        0x3 
  .rodata.respond.str1.4
-                0x10003cec      0x1a2 CMakeFiles/barrier.dir/barrier.c.obj
- *fill*         0x10003e8e        0x2 
+                0x10003aac      0x186 CMakeFiles/barrier.dir/barrier.c.obj
+ *fill*         0x10003c32        0x2 
  .rodata.showMenu.str1.4
-                0x10003e90      0x13b CMakeFiles/barrier.dir/barrier.c.obj
- *fill*         0x10003fcb        0x1 
+                0x10003c34      0x13b CMakeFiles/barrier.dir/barrier.c.obj
+ *fill*         0x10003d6f        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x10003fcc       0x22 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10003fee        0x2 
+                0x10003d70       0x22 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10003d92        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x10003ff0        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003d94        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.panic.str1.4
-                0x10003ffc       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003da0       0x10 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x12 (size before relaxing)
  .rodata.__bi_44
-                0x1000400c        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003db0        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x10004018        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003dbc        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10004024        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003dc8        0xc CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.str1.4
-                0x10004030       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003dd4       0x3c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.6110
-                0x1000406c        0x2 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004070                . = ALIGN (0x4)
- *fill*         0x1000406e        0x2 
+                0x10003e10        0x2 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10003e14                . = ALIGN (0x4)
+ *fill*         0x10003e12        0x2 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10004070                . = ALIGN (0x4)
+                0x10003e14                . = ALIGN (0x4)
 
-.rel.dyn        0x10004070        0x0
- .rel.iplt      0x10004070        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x10003e14        0x0
+ .rel.iplt      0x10003e14        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10004070                __exidx_start = .
+                0x10003e14                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10004070                __exidx_end = .
-                0x10004070                . = ALIGN (0x4)
-                0x10004070                __binary_info_start = .
+                0x10003e14                __exidx_end = .
+                0x10003e14                . = ALIGN (0x4)
+                0x10003e14                __binary_info_start = .
 
-.binary_info    0x10004070       0x1c
+.binary_info    0x10003e14       0x1c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10004070        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e14        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10004074        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e18        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10004078        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e1c        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x1000407c        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e20        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10004080        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e24        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10004084        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e28        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x10004088        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10003e2c        0x4 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
-                0x1000408c                __binary_info_end = .
-                0x1000408c                . = ALIGN (0x4)
-                0x1000408c                __etext = .
+                0x10003e30                __binary_info_end = .
+                0x10003e30                . = ALIGN (0x4)
+                0x10003e30                __etext = .
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -1717,7 +1718,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x20000000       0xc0 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x17c load address 0x1000408c
+.data           0x200000c0      0x17c load address 0x10003e30
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -1801,33 +1802,33 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x2000023c                __data_end__ = .
 
 .tm_clone_table
-                0x2000023c        0x0 load address 0x10004208
+                0x2000023c        0x0 load address 0x10003fac
  .tm_clone_table
                 0x2000023c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x2000023c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x2000023c        0x0 load address 0x10004208
+.igot.plt       0x2000023c        0x0 load address 0x10003fac
  .igot.plt      0x2000023c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x2000023c        0x0 load address 0x10004208
+                0x2000023c        0x0 load address 0x10003fac
                 0x2000023c                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10004208
+.scratch_x      0x20040000        0x0 load address 0x10003fac
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10004208                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10003fac                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10004208
+.scratch_y      0x20041000        0x0 load address 0x10003fac
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10004208                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10003fac                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20000240      0x3d8
                 0x20000240                . = ALIGN (0x4)
@@ -1892,8 +1893,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10004208        0x0
-                0x10004208                __flash_binary_end = .
+.flash_end      0x10003fac        0x0
+                0x10003fac                __flash_binary_end = .
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -1948,7 +1949,7 @@ LOAD CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/
 LOAD CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-LOAD /tmp/cc8IIXiw.o
+LOAD /tmp/ccscO9wt.o
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2038,7 +2039,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000056c       0x2c CMakeFiles/barrier.dir/root/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x00000598       0x22 /tmp/cc8IIXiw.o
+                0x00000598       0x22 /tmp/ccscO9wt.o
  .ARM.attributes
                 0x000005ba       0x1e /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

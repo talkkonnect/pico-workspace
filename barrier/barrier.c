@@ -30,7 +30,7 @@
 #define LOW 0
 #define HIGH 1
 
-const char VERSION[] = "Version 1.0 Released 13/11/2022 at 22:20 (ICT)\r\n";
+const char VERSION[] = "Version 1.1 Released 15/11/2022 at 15:42 (ICT)\r\n";
 
 const uint LED_PIN = 25;    // Pico On Board LED (Output LED)
 const uint ETT_PORT_0 = 16; // Barrier Up (Output Relay)
@@ -143,9 +143,9 @@ void respond(char buffer)  {
         if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
             uart_puts(UART0_ID,"'{\"ack\":\"BR POS\"}'\r\n");
-            uart_puts(UART0_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
+            //uart_puts(UART0_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
             uart_puts(UART1_ID,"'{\"ack\":\"BR POS\"}'\r\n");
-            uart_puts(UART1_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
+            //uart_puts(UART1_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
         }
         if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
@@ -164,9 +164,9 @@ void respond(char buffer)  {
         if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
             gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
             uart_puts(UART0_ID,"'{\"ack\":\"BR POS\"}'\r\n");
-            uart_puts(UART0_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
+            //uart_puts(UART0_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
             uart_puts(UART1_ID,"'{\"ack\":\"BR POS\"}'\r\n");
-            uart_puts(UART1_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
+            //uart_puts(UART1_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
         }
       }
       if (buffer == '6') {
@@ -260,18 +260,22 @@ int main() {
     if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
         gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
       	current_barrier_state = 2;
+  	sleep_ms(100);
     }
     if (gpio_get(BARRIER_UP_SIGNAL) == 0 &&
         gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
       	current_barrier_state = 0;
+  	sleep_ms(100);
     }
     if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
         gpio_get(BARRIER_DOWN_SIGNAL) == 0) {
       	current_barrier_state = 1;
+  	sleep_ms(100);
     }
     if (gpio_get(BARRIER_UP_SIGNAL) == 1 &&
         gpio_get(BARRIER_DOWN_SIGNAL) == 1) {
       	current_barrier_state = 2;
+  	sleep_ms(100);
     }
 
     if (current_barrier_state != previous_barrier_state) {
@@ -284,8 +288,8 @@ int main() {
         uart_puts(UART1_ID,"'{\"state\":\"BR UP\"}'\r\n");
       }
       if (current_barrier_state == 2) {
-        uart_puts(UART0_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
-        uart_puts(UART1_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
+        //uart_puts(UART0_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
+        //uart_puts(UART1_ID,"'{\"state\":\"BR UNDEF\"}'\r\n");
       }
       previous_barrier_state = current_barrier_state;
     }
