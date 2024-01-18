@@ -30,7 +30,7 @@
 #define LOW 0
 #define HIGH 1
 
-const char VERSION[] = "Version 1.1 Released 15/11/2022 at 15:42 (ICT)\r\n";
+const char VERSION[] = "Version 1.2 Released 18/01/2023 at 16:17 (ICT)\r\n";
 
 /** Upated GPIO Ports for JLCPCB Board **/
 const uint LED_PIN = 25;    // Pico On Board LED (Output LED)
