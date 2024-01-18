@@ -32,15 +32,16 @@
 
 const char VERSION[] = "Version 1.1 Released 15/11/2022 at 15:42 (ICT)\r\n";
 
+/** Upated GPIO Ports for JLCPCB Board **/
 const uint LED_PIN = 25;    // Pico On Board LED (Output LED)
-const uint ETT_PORT_0 = 16; // Barrier Up (Output Relay)
-const uint ETT_PORT_1 = 17; // Barrier Down (Output Relay)
-const uint ETT_PORT_2 = 18; // Push up, Push Down (Output Relay)
-const uint ETT_PORT_3 = 19; // Barrier Position UP (Input Opto)
-const uint ETT_PORT_4 = 20; // Barrier Position Down (Input Opto)
-const uint ETT_PORT_5 = 21; // Red Light 220V (Output Relay)
-const uint ETT_PORT_6 = 22; // Green Light 220V (Output Relay)
-const uint ETT_PORT_7 = 28; // Beeper (Output Beeper)
+const uint ETT_PORT_0 = 28; // Barrier Up (Output Relay)
+const uint ETT_PORT_1 = 22; // Barrier Down (Output Relay)
+const uint ETT_PORT_2 = 21; // Push up, Push Down (Output Relay)
+const uint ETT_PORT_3 = 20; // Barrier Position UP (Input Opto)
+const uint ETT_PORT_4 = 19; // Barrier Position Down (Input Opto)
+const uint ETT_PORT_5 = 18; // Red Light 220V (Output Relay)
+const uint ETT_PORT_6 = 17; // Green Light 220V (Output Relay)
+const uint ETT_PORT_7 = 16; // Beeper (Output Beeper)
 
 const uint BARRIER_UP_CMD = ETT_PORT_0;
 const uint BARRIER_DOWN_CMD = ETT_PORT_1;
